@@ -1,0 +1,52 @@
+.controls {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	width: 100%;
+	height: 50%;
+}
+.controls button {
+	border: none;
+	background-color: transparent;
+	box-shadow: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	width: 50%;
+	display: flex;
+	align-items: center;
+	padding: 27px;
+	cursor: pointer;
+}
+
+.rightBtn {
+	justify-content: flex-end;
+}
+.rightBtn .arrow {
+	rotate: 180deg;
+}
+
+.arrow {
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 50%;
+	background: #fff6;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform-origin: center center;
+	transition: transform 0.2s;
+}
+
+.arrow img {
+	width: 1rem;
+	height: 1rem;
+}
+.arrow:hover {
+	transform: scale(1.1);
+}
+
+@media screen and (max-width: 1024px) {
+	.controls button {
+		padding: 20px;
+	}
+}

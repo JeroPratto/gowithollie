@@ -1,0 +1,163 @@
+.background {
+	width: 50%;
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	visibility: hidden;
+	transition-property: visibility, opacity;
+	transition-duration: 0.5s;
+	opacity: 0;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	z-index: 150;
+}
+.backgroundActive {
+	visibility: visible;
+	opacity: 1;
+}
+.container {
+	height: calc(100vh - 19px);
+	width: calc(50% - 14px);
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	position: fixed;
+	top: 10px;
+	left: 9px;
+	background-color: #dbdbdb;
+	border-radius: 1.5rem;
+	z-index: 150;
+	transform-origin: center center;
+	transition-property: opacity, transform, visibility;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	opacity: 0;
+	visibility: hidden;
+	transform: scale(0.95);
+	padding: 1.1rem calc((100vw - 13rem) / 12);
+}
+.open {
+	opacity: 1;
+	transform: scale(1);
+	visibility: visible;
+}
+
+.closeButton {
+	position: absolute;
+	top: calc(1.1rem * 0.9);
+	right: 1.1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 1.25rem;
+	width: 1.25rem;
+	border-radius: 50%;
+	border: 1px solid #000;
+	cursor: pointer;
+	background-color: transparent;
+}
+.closeButton img {
+	width: 100%;
+	height: 100%;
+}
+
+.title {
+	font-size: 2rem;
+	padding-bottom: 27px;
+	font-weight: 500;
+}
+
+.productsContainer {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.empty {
+	margin-bottom: 1.1rem;
+	width: 100%;
+}
+.totalTaxes {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	padding: 17px 0;
+}
+
+.checkout {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 27px;
+	width: 100%;
+}
+
+.checkoutBtn {
+	background-color: #000;
+	line-height: 1rem;
+	border-radius: 1.6rem;
+	padding: 17px 26px;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	font-size: 1rem;
+}
+.checkoutBtn:hover {
+	background-color: #5f7dfa;
+	color: #000;
+}
+
+.checkoutBtn:disabled {
+	background-color: gray;
+	color: #dbdbdb;
+	cursor: not-allowed;
+}
+
+.checkout p {
+	max-width: 20ch;
+	text-align: right;
+	font-size: 80%;
+	font-weight: 400;
+}
+
+@media screen and (max-width: 1024px) {
+	.background {
+		width: 100%;
+		top: 61px;
+	}
+	.container {
+		height: calc(100vh - 64px);
+		width: calc(100% - 12px);
+		top: 62px;
+		left: 6px;
+	}
+	.open {
+		opacity: 1;
+		transform: scale(1);
+		visibility: visible;
+	}
+	.closeButton {
+		right: 21px;
+	}
+	.title {
+		font-size: 24px;
+		padding-bottom: 21px;
+	}
+	.empty {
+		margin-bottom: 14px;
+	}
+	.totalTaxes {
+		padding: 14px 0;
+	}
+	.checkout {
+		padding-top: 14px;
+	}
+	.checkoutBtn {
+		padding: 14px 21px;
+	}
+}

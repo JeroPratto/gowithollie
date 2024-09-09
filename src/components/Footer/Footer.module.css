@@ -1,0 +1,11 @@
+.footer {
+	display: flex;
+	flex-direction: column;
+	min-height: calc(100vh - 20px);
+}
+
+@media screen and (max-width: 1024px) {
+	.footer {
+		min-height: calc(100vh - 60px);
+	}
+}

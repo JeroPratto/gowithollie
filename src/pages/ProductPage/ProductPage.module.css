@@ -1,0 +1,23 @@
+.container {
+	display: flex;
+}
+.leftContainer {
+	padding: 10px;
+	padding-right: 5px;
+	background-color: #fff;
+	width: 50%;
+}
+
+.mobile {
+	display: none;
+}
+
+@media screen and (max-width: 1024px) {
+	.mobile {
+		display: block;
+	}
+	.leftContainer {
+		width: 100%;
+		padding: 7px;
+	}
+}

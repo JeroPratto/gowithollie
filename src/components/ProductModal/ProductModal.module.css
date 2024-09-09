@@ -1,0 +1,253 @@
+.background {
+	width: 50%;
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	visibility: hidden;
+	transition-property: visibility, opacity;
+	transition-duration: 0.5s;
+	opacity: 0;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	z-index: 150;
+}
+.backgroundActive {
+	visibility: visible;
+	opacity: 1;
+}
+.container {
+	height: calc(100vh - 19px);
+	width: calc(50% - 14px);
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	position: fixed;
+	top: 10px;
+	left: 9px;
+	background-color: #dbdbdb;
+	border-radius: 1.5rem;
+	z-index: 100;
+	transform-origin: center center;
+	transition-property: opacity, transform, visibility;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	opacity: 0;
+	visibility: hidden;
+	transform: scale(0.95);
+	padding: 1.1rem calc((100vw - 13rem) / 12);
+}
+.open {
+	opacity: 1;
+	transform: scale(1);
+	visibility: visible;
+}
+
+.closeButton {
+	position: absolute;
+	top: calc(1.1rem * 0.9);
+	right: 1.1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 1.25rem;
+	width: 1.25rem;
+	border-radius: 50%;
+	border: 1px solid #000;
+	cursor: pointer;
+	background-color: transparent;
+}
+.closeButton img {
+	width: 100%;
+	height: 100%;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 27px;
+}
+.title {
+	font-size: 2rem;
+	font-weight: 400;
+}
+.prices {
+	text-align: right;
+}
+.price {
+	font-size: 2rem;
+	font-weight: 400;
+}
+.prePrice {
+	text-decoration: line-through;
+	opacity: 0.5;
+}
+
+/*  */
+.item {
+	padding-bottom: 1rem;
+	border-top: 1px solid #000;
+	width: 100%;
+}
+.titleItem {
+	padding-top: 1rem;
+	font-size: 1.3rem;
+	width: 100%;
+	height: 100%;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	text-align: left;
+}
+
+.grid {
+	display: grid;
+	grid-template-rows: 0fr;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.grid div {
+	overflow: hidden;
+}
+.contentOpen {
+	grid-template-rows: 1fr;
+	margin: 1rem 0;
+}
+.dropdownText {
+	font-weight: 300;
+}
+.specifications {
+	display: flex;
+	flex-direction: column;
+	gap: 1.1rem;
+	font-size: 0.9rem;
+}
+
+.specifications li {
+	display: flex;
+	gap: 10px;
+	width: 100%;
+}
+
+.nameSpec {
+	width: 33.333333%;
+	font-weight: 500;
+}
+
+.addProduct {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 27px;
+	width: 100%;
+	border-top: 1px solid #000;
+}
+
+.addProductBtn {
+	background-color: #000;
+	line-height: 1rem;
+	border-radius: 1.6rem;
+	padding: 17px 26px;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	font-size: 1rem;
+}
+.addProductBtn:hover {
+	background-color: #5f7dfa;
+	color: #000;
+}
+
+.addProduct p {
+	max-width: 20ch;
+	text-align: right;
+	font-size: 80%;
+	font-weight: 400;
+}
+
+@media screen and (max-width: 1024px) {
+	.background {
+		width: 100%;
+		position: static;
+		top: auto;
+		left: auto;
+		bottom: auto;
+		visibility: visible;
+		opacity: 1;
+	}
+	.container {
+		height: auto;
+		width: 100%;
+		position: static;
+		top: auto;
+		left: auto;
+		opacity: 1;
+		visibility: visible;
+		transform: scale(1);
+		padding: 14px calc((100vw - 13rem) / 12);
+		border-radius: 0 0 1.5rem 1.5rem;
+		margin-bottom: 10px;
+	}
+	.closeButton {
+		display: none;
+	}
+
+	/*  */
+	.header {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.title {
+		font-size: 1.4rem;
+		font-weight: 400;
+	}
+	.prices {
+		text-align: right;
+	}
+	.price {
+		font-size: 1.4rem;
+		font-weight: 400;
+	}
+	.prePrice {
+		text-decoration: line-through;
+		opacity: 0.5;
+	}
+
+	/*  */
+	.item {
+		padding-bottom: 14px;
+	}
+	.titleItem {
+		padding-top: 14px;
+		font-size: 1rem;
+	}
+	.contentOpen {
+		margin: 14px 0;
+	}
+	.dropdownText {
+		font-size: 14px;
+		font-weight: 300;
+	}
+	.specifications {
+		gap: 10px;
+		font-size: 0.8rem;
+	}
+
+	.addProduct {
+		padding-top: 20px;
+	}
+
+	.addProductBtn {
+		padding: 14px 21px;
+	}
+	.addProduct p {
+		max-width: 20ch;
+		text-align: right;
+		font-size: 80%;
+		font-weight: 400;
+	}
+}

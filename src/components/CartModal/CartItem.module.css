@@ -1,0 +1,93 @@
+.container {
+	width: 100%;
+	border-top: 1px solid #000;
+	display: flex;
+	height: 150px;
+}
+
+.imageContainer {
+	height: 100%;
+}
+.imageContainer img {
+	height: 100%;
+}
+.information {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-left: 1.1rem;
+	padding: 1.1rem 0;
+	width: 100%;
+}
+
+.header,
+.footer {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.quantityControls {
+	display: flex;
+	/* justify-content: center; */
+	height: 20px;
+}
+
+.quantityControls button {
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+}
+.quantityControls img {
+	width: 0.8rem;
+	pointer-events: none;
+}
+
+.quantityControls p {
+	width: 4ch;
+	margin: 0 calc(1.1rem / 2);
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.price {
+	display: flex;
+	gap: 1.1rem;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.prePrice {
+	text-decoration: line-through;
+	opacity: 0.5;
+}
+
+.remove {
+	border: none;
+	cursor: pointer;
+	background-color: transparent;
+	font-size: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+	.information {
+		padding: 14px;
+		padding-right: 0;
+		margin: 0;
+	}
+	.prePrice {
+		font-size: 12px;
+	}
+	.header {
+		gap: 5px;
+	}
+	.quantityControls p {
+		width: 2ch;
+		margin: 0 7px;
+	}
+}
