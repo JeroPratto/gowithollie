@@ -16,8 +16,20 @@
 	object-fit: cover;
 	object-position: center center;
 	border-radius: 1.5rem;
+	opacity: 1;
 }
-
+.hidden {
+	opacity: 0;
+}
+.skeleton {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 10px;
+	width: 100%;
+	border-radius: 1.5rem;
+	background-color: #e0e0e0;
+}
 .title {
 	position: absolute;
 	top: 25px;
